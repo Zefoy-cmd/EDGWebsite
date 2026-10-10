@@ -6,8 +6,9 @@
     <title>Siden blev ikke fundet (404) | ErDuGamer</title>
     <meta name="description" content="Siden du leder efter findes ikke. Gå tilbage til forsiden af ErDuGamer." />
     <meta name="robots" content="noindex, follow" />
-    <meta name="theme-color" content="#05080f" />
+    <meta name="theme-color" content="#f1ece1" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -16,8 +17,8 @@
     <header class="topbar">
       <div class="container header-inner">
         <a class="brand" href="/" aria-label="ErDuGamer – forside">
-          <img class="brand-mark" src="/favicon.svg" alt="" width="32" height="32" />
-          ErDuGamer
+          <img class="brand-mark" src="/favicon.svg" alt="" width="36" height="36" />
+          <span>ErDuGamer<span class="q">?</span></span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span><span></span>
@@ -26,7 +27,6 @@
           <a href="/#om">Om os</a>
           <a href="/#events">Events</a>
           <a href="/#faq">FAQ</a>
-          <a href="/#kontakt">Kontakt</a>
           <a class="button button-primary" href="mailto:kontakt@erdugamer.dk?subject=Jeg%20vil%20v%C3%A6re%20med%20i%20ErDuGamer">Kontakt os</a>
         </nav>
       </div>
@@ -34,26 +34,28 @@
 
     <main id="indhold">
       <section class="container error-page">
-        <div>
-          <p class="error-code" aria-hidden="true">404</p>
-          <h1>Game over – siden findes ikke</h1>
-          <p>Siden er måske flyttet, slettet, eller også er der en tastefejl i adressen. Prøv at respawne på forsiden.</p>
-          <div class="hero-actions" data-hero-cta>
-            <a class="button button-primary" href="/">Tilbage til forsiden</a>
-            <a class="button button-secondary" href="/#om">Læs om ErDuGamer</a>
-          </div>
+        <span class="tag">Fejl 404 · Siden findes ikke</span>
+        <h1 class="game-over">Game <span>over</span></h1>
+        <p class="lead">Siden er måske flyttet, slettet – eller også er der en tastefejl i adressen.</p>
+        <p class="continue">Continue? <span class="blink" aria-hidden="true">▮</span></p>
+        <div class="hero-actions" data-hero-cta>
+          <a class="button button-primary" href="/">Ja – til forsiden <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="/#om">Læs om ErDuGamer</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer-inner">
+      <div class="container">
+        <p class="footer-word" aria-hidden="true">ErDuGamer?</p>
+        <div class="footer-inner">
         <span>© <span data-year>2026</span> ErDuGamer</span>
         <div class="footer-links">
           <a href="/privatlivspolitik">Privatlivspolitik</a>
           <a href="/vilkaar">Vilkår</a>
           <button type="button" data-cookie-settings>Cookieindstillinger</button>
         </div>
+      </div>
       </div>
     </footer>
 

@@ -76,11 +76,13 @@ function renderSkeletons(count = 3) {
     </article>`).join('');
 }
 
-function renderMessage(text, withRetry) {
+function renderMessage({ label, title, text, retry = false }) {
   eventList.innerHTML = `
-    <div class="card state-message">
-      <p>${escapeHtml(text)}</p>
-      ${withRetry ? '<button type="button" class="button button-secondary" data-retry>Prøv igen</button>' : ''}
+    <div class="state-message">
+      <p class="state-label">${escapeHtml(label)}</p>
+      <p class="state-title">${escapeHtml(title)}</p>
+      <p class="state-text">${escapeHtml(text)}</p>
+      ${retry ? '<button type="button" class="button button-primary" data-retry>Prøv igen ↻</button>' : ''}
     </div>`;
 }
 
@@ -92,7 +94,11 @@ async function loadEvents() {
     const events = await response.json();
 
     if (!Array.isArray(events) || events.length === 0) {
-      renderMessage('Der er ingen planlagte events lige nu – kig forbi igen snart.', false);
+      renderMessage({
+        label: 'Næste level loader …',
+        title: 'Ingen events endnu',
+        text: 'Der er ingen planlagte events lige nu – kig forbi igen snart, eller skriv til os med en idé.',
+      });
       return;
     }
 
@@ -101,11 +107,16 @@ async function loadEvents() {
         <span class="event-tag">${escapeHtml(event.tag)}</span>
         <h3>${escapeHtml(event.title)}</h3>
         <p>${escapeHtml(event.description)}</p>
-        ${event.when ? `<p class="event-meta">🗓 ${escapeHtml(event.when)}</p>` : ''}
+        ${event.when ? `<p class="event-meta">▶ ${escapeHtml(event.when)}</p>` : ''}
       </article>`).join('');
   } catch (error) {
     console.error('Kunne ikke hente events:', error);
-    renderMessage('Vi kunne ikke hente events lige nu.', true);
+    renderMessage({
+      label: 'Fejl · Forbindelsen røg',
+      title: 'Lag spike!',
+      text: 'Vi kunne ikke hente events lige nu.',
+      retry: true,
+    });
   } finally {
     eventList.setAttribute('aria-busy', 'false');
   }
@@ -188,7 +199,7 @@ banner.setAttribute('role', 'dialog');
 banner.setAttribute('aria-labelledby', 'cookie-title');
 banner.setAttribute('aria-describedby', 'cookie-desc');
 banner.innerHTML = `
-  <h2 id="cookie-title">Vi bruger cookies 🍪</h2>
+  <h2 id="cookie-title">Cookies</h2>
   <p id="cookie-desc">
     Vi bruger nødvendige cookies for at siden virker. Med dit samtykke vil vi også bruge
     cookies til statistik og marketing. Du kan altid ændre dit valg.
