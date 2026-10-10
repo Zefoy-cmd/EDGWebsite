@@ -16,13 +16,6 @@ Statisk frontend til Cloudflare Pages – ingen build-step.
 | `_headers` | Sikkerheds-headers til Cloudflare Pages |
 | `script.js` | Menu, sticky mobil-CTA, loading states, cookiebanner |
 
-## Før go-live – TODO
-- [ ] Når I får en Discord: skift "Kontakt os"-knapperne (mailto-links) i alle `.html`-filer ud med invitationslinket, og tilføj Discord i privatlivspolitikken
-- [ ] Tjek at `kontakt@erdugamer.dk` findes
-- [ ] Udfyld navn/adresse/CVR i `privatlivspolitik.html` og `vilkaar.html` (søg efter `TODO`)
-- [ ] Opdatér `lastmod` i `sitemap.xml` når sider ændres
-- [ ] Tilføj evt. et `og:image` (1200×630 PNG) til deling på sociale medier
-
 ## Cookies
 Samtykke gemmes i `localStorage` under `edg-cookie-consent`. Når I tilføjer statistik/marketing,
 så indlæs scriptet i `onConsent()` i `script.js` (eller lyt på `edg:consent`-eventet),
