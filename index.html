@@ -1,14 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EDG Gaming Community</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ErDuGamer – Dansk gaming-fællesskab | Find nogen at spille med</title>
+    <meta name="description" content="ErDuGamer er et gratis dansk gaming-fællesskab. Find nogen at spille med og bliv en del af fællesskabet – uanset platform." />
+    <link rel="canonical" href="https://erdugamer.dk/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#05080f" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="og:site_name" content="ErDuGamer" />
+    <meta property="og:title" content="ErDuGamer – Dansk gaming-fællesskab" />
+    <meta property="og:description" content="Find nogen at spille med og bliv en del af et dansk gaming-fællesskab." />
+    <meta property="og:url" content="https://erdugamer.dk/" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ErDuGamer",
+        "url": "https://erdugamer.dk/",
+        "logo": "https://erdugamer.dk/favicon.svg"
+      }
+    </script>
   </head>
   <body>
-   <h1>Currently in maintenance =)</h1>
+    <a class="skip-link" href="#indhold">Spring til indhold</a>
 
-    <script src="script.js"></script>
+    <header class="topbar">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="ErDuGamer – forside">
+          <img class="brand-mark" src="/favicon.svg" alt="" width="32" height="32" />
+          ErDuGamer
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="main-nav" aria-label="Hovedmenu">
+          <a href="#om">Om os</a>
+          <a href="#events">Events</a>
+          <a href="#faq">FAQ</a>
+          <a href="#kontakt">Kontakt</a>
+          <a class="button button-primary" href="mailto:kontakt@erdugamer.dk?subject=Jeg%20vil%20v%C3%A6re%20med%20i%20ErDuGamer">Kontakt os</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="indhold">
+      <!-- Hero / CTA above the fold -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Dansk gaming-fællesskab</p>
+            <h1>Er du gamer? <span class="highlight">Så hører du til her.</span></h1>
+            <p>
+              Find nogen at spille med, og bliv en del af et
+              fællesskab, hvor alle er velkomne – uanset om du spiller casual eller competitive.
+            </p>
+            <div class="hero-actions" data-hero-cta>
+              <a class="button button-primary" href="mailto:kontakt@erdugamer.dk?subject=Jeg%20vil%20v%C3%A6re%20med%20i%20ErDuGamer">
+                Bliv en del af fællesskabet
+              </a>
+              <a class="button button-secondary" href="#om">Læs mere om os</a>
+            </div>
+            <p class="hero-note">Gratis at være med · Skriv til os, så hører du fra os</p>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-card">
+              <span class="hero-card-title">Hvorfor ErDuGamer?</span>
+              <h2>Mere spil, mindre solo-queue</h2>
+              <ul class="check-list">
+                <li>100% gratis at være med</li>
+                <li>PC, PlayStation, Xbox og Switch</li>
+                <li>Events og turneringer på vej</li>
+                <li>Dansktalende og venlig tone</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="om" aria-labelledby="om-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Om os</p>
+            <h2 id="om-title">Et sted at spille, snakke og hænge ud</h2>
+            <p>ErDuGamer samler danske gamere på tværs af spil og platforme. Vi er drevet af frivillige, der elsker at game.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">🎮</div>
+              <h3>Find holdkammerater</h3>
+              <p>Slip for tilfældige randoms. Find spillere på dit niveau, der vil det samme som dig.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <h3>Events og turneringer</h3>
+              <p>Vi er i gang med at planlægge spilaftener og turneringer. Har du en idé? Så skriv til os.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">🛡️</div>
+              <h3>Et trygt fællesskab</h3>
+              <p>Klare regler og aktive moderatorer sørger for en god tone. Toxic adfærd hører ikke til her.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="events" aria-labelledby="events-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Kommende events</p>
+            <h2 id="events-title">Hvad sker der?</h2>
+            <p>Skriv til os, hvis du vil være med eller har en idé til et event.</p>
+          </div>
+          <!-- Udfyldes fra /events.json – viser skeleton-kort mens der hentes -->
+          <div class="card-grid" data-events aria-live="polite" aria-busy="true">
+            <noscript>
+              <div class="card state-message"><p>Slå JavaScript til for at se kommende events – eller skriv til os.</p></div>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Ofte stillede spørgsmål</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Koster det noget at være med?</summary>
+              <p>Nej. Det er helt gratis at være en del af ErDuGamer.</p>
+            </details>
+            <details>
+              <summary>Hvilke spil spiller I?</summary>
+              <p>Alt muligt! Vi har kanaler til de største spil, og hvis dit spil mangler, så sig til – så opretter vi det.</p>
+            </details>
+            <details>
+              <summary>Skal jeg være god for at være med?</summary>
+              <p>Overhovedet ikke. Vi har både nye og erfarne spillere, og alle er velkomne.</p>
+            </details>
+            <details>
+              <summary>Er der en aldersgrænse?</summary>
+              <p>Alle er velkomne. Er du under 15 år, skal en forælder give lov, før du sender os dine oplysninger. Visse events kan have deres egne aldersgrænser, hvilket vil fremgå af eventet.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt" aria-labelledby="kontakt-title">
+        <div class="container">
+          <div class="card cta-band">
+            <div>
+              <h2 id="kontakt-title">Klar til at game med os?</h2>
+              <p>Skriv til os på <a href="mailto:kontakt@erdugamer.dk">kontakt@erdugamer.dk</a>.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:kontakt@erdugamer.dk?subject=Jeg%20vil%20v%C3%A6re%20med%20i%20ErDuGamer">Kontakt os</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© <span data-year>2026</span> ErDuGamer</span>
+        <div class="footer-links">
+          <a href="/privatlivspolitik">Privatlivspolitik</a>
+          <a href="/vilkaar">Vilkår</a>
+          <button type="button" data-cookie-settings>Cookieindstillinger</button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-cta is-hidden">
+      <a class="button button-primary button-block" href="mailto:kontakt@erdugamer.dk?subject=Jeg%20vil%20v%C3%A6re%20med%20i%20ErDuGamer">
+        Vil du være med? Skriv til os
+      </a>
+    </div>
+
+    <script src="/script.js" defer></script>
   </body>
 </html>
